@@ -22,7 +22,7 @@ internal static class PlanetsService
         new()
         {
             Name = "Pornstach",
-            Subtitle = "Versatile Mushtasch Rider",
+            Subtitle = "Versatile Mustache Rider",
             HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0001_2.jpg",
             Description = "Of all the planets, Venus is the one most similar to Earth. In fact, Venus is often called Earth's “sister” planet. As similar as it is in some ways, however, it is also very different in others.",
             AccentColorStart = Color.FromArgb("#000"),

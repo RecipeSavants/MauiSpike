@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BuddyNetworks.Roosters.Views.StartPage2"
              Title="StartPage2">
-    <Grid>
+    <Grid IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
         <Image Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="https://marketingbuddynetworks.blob.core.windows.net/roosters/splash2.png"></Image>
         <Grid>
             <Border
