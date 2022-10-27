@@ -106,13 +106,6 @@
                                         <Image
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
-                                            Aspect="AspectFit"
-                                            VerticalOptions="Fill"
-                                            HorizontalOptions="Fill"/>
-                                        <Image
-                                            Grid.Row="0"
-                                            Source="{Binding HeroImage}"
                                             Aspect="AspectFill"
                                             VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
@@ -210,28 +203,30 @@
                                 x:DataType="models:Planet">
                                 <Border
                                     VerticalOptions="Fill"
+                                    HorizontalOptions="Fill"
+                                    HeightRequest="140"
                                     WidthRequest="140"
                                     StrokeThickness="0"
                                     Background="{Binding Background}"
-                                    Padding="16">
+                                    Padding="0">
                                     <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="16"/>
+                                        <RoundRectangle CornerRadius="24"/>
                                     </Border.StrokeShape>
                                     <Grid
                                         RowDefinitions="*,Auto,Auto"
                                         RowSpacing="4">
                                         <Image
-                                            Grid.Row="0"
+                                            Grid.Row="0" 
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
-                                            Aspect="AspectFit"                                        
+                                            Aspect="AspectFill"                                        
                                             VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
                                             Style="{StaticResource AllPlanetHeaderStyle}"
                                             Text="{Binding Name}"
-                                            Margin="0,4,0,0"/>
+                                            HorizontalTextAlignment="Center"
+                                            Margin="0,2,0,8"/>
                                     </Grid>
                                 </Border>
                             </DataTemplate>

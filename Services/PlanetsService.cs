@@ -8,7 +8,7 @@ internal static class PlanetsService
 		{
 			Name = "Mercury",
 			Subtitle = "The smallest planet",
-			HeroImage = "mercury.png",
+			HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0000_1.jpg",
 			Description = "Mercury is the first of the four terrestrial planets. This means it is a planet made mostly of rock. The planets closest to the Sun—Venus, Earth, and Mars—are the other three.",
 			AccentColorStart = Color.FromArgb("#000"),
 			AccentColorEnd = Color.FromArgb("#000"),
@@ -23,7 +23,7 @@ internal static class PlanetsService
         {
             Name = "Venus",
             Subtitle = "The pressure cooker",
-            HeroImage = "venus.png",
+            HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0001_2.jpg",
             Description = "Of all the planets, Venus is the one most similar to Earth. In fact, Venus is often called Earth's “sister” planet. As similar as it is in some ways, however, it is also very different in others.",
             AccentColorStart = Color.FromArgb("#000"),
             AccentColorEnd = Color.FromArgb("#000"),
@@ -39,7 +39,7 @@ internal static class PlanetsService
         {
             Name = "Earth",
             Subtitle = "The cradle of life",
-            HeroImage = "earth.png",
+            HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0002_3.jpg",
             Description = "The Earth is the only planet known where life exists. Almost 1.5 million species of animals and plants have been discovered so far, and many more have yet to be found. While other planets may have small amounts of ice or steam, the Earth is 2/3 water. Earth has perfect conditions for a breathable atmosphere.",
             AccentColorStart = Color.FromArgb("#000"),
             AccentColorEnd = Color.FromArgb("#000"),
@@ -54,7 +54,7 @@ internal static class PlanetsService
         {
             Name = "Mars",
             Subtitle = "The red beauty",
-            HeroImage = "mars.png",
+            HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0003_4.jpg",
             Description = "No planet has sparked the imaginations of humans as much as Mars. It may be the reddish color of Mars, or the fact that it can often be easily seen in the night sky, that has caused people to wonder about this close neighbor of ours. Tales of “Martians” invading Earth have been around for well over fifty years. But is it likely that any kind of life really does exist on Mars?",
             AccentColorStart = Color.FromArgb("#000"),
             AccentColorEnd = Color.FromArgb("#000"),
@@ -69,7 +69,7 @@ internal static class PlanetsService
         {
             Name = "Jupiter",
             Subtitle = "The gas giant",
-            HeroImage = "jupiter.png",
+            HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0004_5.jpg",
             Description = "The planet Jupiter is the first of the gas giant planets. Made mostly of gas, they include Jupiter, Saturn, Uranus, and Neptune.\n\nJupiter is first among the planets in terms of size and mass. Its diameter is 11 times bigger than Earth, and its mass is 2.5 times greater than all the other planets combined. The “Great Red Spot” on Jupiter is actually a raging storm.",
             AccentColorStart = Color.FromArgb("#000"),
             AccentColorEnd = Color.FromArgb("#000"),
@@ -84,7 +84,7 @@ internal static class PlanetsService
         {
             Name = "Saturn",
             Subtitle = "The ring planet",
-            HeroImage = "saturn.png",
+            HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0005_6.jpg",
             Description = "Most people know about the rings around Saturn, because they are the brightest and most colorful. These rings are made mainly out of ice particles orbiting the planet. While the rings themselves seem big, the particles are very small, usually no more than 10 feet (3 meters) wide.",
             AccentColorStart = Color.FromArgb("#000"),
             AccentColorEnd = Color.FromArgb("#000"),
@@ -98,10 +98,18 @@ internal static class PlanetsService
         },
         new()
         {
-            Name = "Uranus",
+            Name = "ChiBearTop",
             Subtitle = "Fun & Furry Top Man",
-            HeroImage = "uranus.png",
-            Description = "Uranus is the first planet so far away from the Earth that it can only be seen with the use of a telescope. When it was first discovered in 1781, scientists didn't know what they had found. As astronomers studied the object more closely, they discovered that it had a circular orbit around the Sun. They had found the seventh planet.",
+            HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0006_7.jpg",
+            Description = "",
+            Age: "",
+            Location: "",
+            Hood: "",
+            When: "",
+            Where: "",
+            Feet: "",
+            Inches: "",
+            Weight: "",
             AccentColorStart = Color.FromArgb("#000"),
             AccentColorEnd = Color.FromArgb("#000"),
             Images = new()
@@ -115,7 +123,7 @@ internal static class PlanetsService
         {
             Name = "Neptune",
             Subtitle = "Eighth & fathest-away",
-            HeroImage = "neptune.png",
+            HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0007_8.jpg",
             Description = "Imagine being so good at math that you could figure out the location of a planet you had never even seen! That is what John C. Adams did in 1843 when he discovered Neptune.",
             AccentColorStart = Color.FromArgb("#000"),
             AccentColorEnd = Color.FromArgb("#000"),

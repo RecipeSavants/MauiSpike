@@ -42,23 +42,25 @@
             HorizontalScrollBarVisibility="Never"
             VerticalScrollBarVisibility="Never"
             Margin="0,16,0,0">
-
-            <VerticalStackLayout
+            <StackLayout>
+<VerticalStackLayout
                 Spacing="18">
 
                 <!-- Planet Image -->
                 <Image
                     Source="{Binding HeroImage}"
-                    Aspect="AspectFit"
+                    Aspect="AspectFill"
                     HorizontalOptions="Fill"
-                    HeightRequest="240"
+                    VerticalOptions="Fill"
+                    HeightRequest="500"
+                    WidthRequest="500"
                     Margin="24,0" />
 
                 <!-- Planet Name -->
                 <Label
                     Style="{StaticResource PlanetHeaderStyle}"
                     Text="{Binding Name}"
-                    Margin="0,-24,0,0"/>
+                    Margin="0,-4,0,0"/>
 
                 <!-- Planet Subtitle -->
                 <Label
@@ -123,6 +125,9 @@
                 </CollectionView>
 
             </VerticalStackLayout>
+
+            </StackLayout>
+            
 
         </ScrollView>
     </Grid>

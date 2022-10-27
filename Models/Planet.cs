@@ -9,7 +9,14 @@ public class Planet
     public Color AccentColorStart { get; set; }
     public Color AccentColorEnd { get; set; }
     public List<string> Images { get; set; }
-
+    public int Age { get; set; }
+    public string Location { get; set; }
+    public string Hood { get; set; }
+    public string When { get; set; }
+    public string Where { get; set; }
+    public string Feet { get; set; }
+    public string Inches { get; set; }
+    public string Weight { get; set; }
     // Background
     public Brush Background
     {
