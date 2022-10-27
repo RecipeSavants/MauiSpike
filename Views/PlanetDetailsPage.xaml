@@ -43,11 +43,10 @@
             VerticalScrollBarVisibility="Never"
             Margin="0,16,0,0">
             <StackLayout>
-<VerticalStackLayout
+                <VerticalStackLayout
                 Spacing="18">
-
-                <!-- Planet Image -->
-                <Image
+                    <!-- Hero Image -->
+                    <Image
                     Source="{Binding HeroImage}"
                     Aspect="AspectFill"
                     HorizontalOptions="Fill"
@@ -56,78 +55,106 @@
                     WidthRequest="500"
                     Margin="24,0" />
 
-                <!-- Planet Name -->
-                <Label
-                    Style="{StaticResource PlanetHeaderStyle}"
+                    <!-- User Name -->
+                    <Label
+                    Style="{StaticResource BoldUserNameStyle}" FontSize="48"
                     Text="{Binding Name}"
                     Margin="0,-4,0,0"/>
 
-                <!-- Planet Subtitle -->
-                <Label
-                    Margin="0,-12,0,0"
-                    Style="{StaticResource PlanetHeaderSubtitleStyle}"
+                    <!-- Headline -->
+                    <Label
+                    Margin="0,-20,0,0"
+                    Style="{StaticResource ProfileSubStyle}"
                     Text="{Binding Subtitle}" />
 
-                <!-- Divider -->
-                <Rectangle
+                    <!-- Slug Line -->
+                    <Label
+                    Margin="0,-12,0,0"
+                    Style="{StaticResource ProfileText}">
+                    <Label.Text>
+                        <MultiBinding StringFormat="{}{0} :: {1} &quot; {2} &apos; :: {3}">
+                            <Binding Path="Age"/>
+                            <Binding Path="Feet"/>
+                            <Binding Path="Inches"/>
+                            <Binding Path="Weight"/>
+                        </MultiBinding>
+                        </Label.Text>
+                    </Label>
+
+                    <!-- Divider -->
+                    <Rectangle
                     HorizontalOptions="Fill"
                     HeightRequest="2"
                     Stroke="Transparent"
                     Fill="{StaticResource LightBorderColor}" />
 
-                <!-- Planet Info -->
-                <Label
-                    Style="{StaticResource PlanetDetailsTextStyle}"
+                                        <!-- Planet Info -->
+                    <Label Style="{StaticResource ProfileLabelStyle}" Text="When &amp; Where" />
+                    <Label
+                    Margin="0,-10,0,0"
+                    Style="{StaticResource ProfileText}">
+                    <Label.Text>
+                        <MultiBinding StringFormat="{}{0} :: {1}">
+                            <Binding Path="When"/>
+                            <Binding Path="Where"/>
+                        </MultiBinding>
+                        </Label.Text>
+                    </Label>
+
+                    <!-- Planet Info -->
+                    <Label Style="{StaticResource ProfileLabelStyle}" Text="More about me" />
+                    <Label
+                    Style="{StaticResource ProfileText}"
                     LineBreakMode="WordWrap"
-                    Text="{Binding Description}" />
+                    Text="{Binding Description}" Margin="0,-10,0,0" />
 
 
-                <!-- Divider -->
-                <Rectangle
+                    <!-- Divider -->
+                    <Rectangle
                     HorizontalOptions="Fill"
                     HeightRequest="2"
                     Stroke="Transparent"
                     Fill="{StaticResource LightBorderColor}" />
 
-                <!-- Planet Gallery -->
-                <Label
-                    Style="{StaticResource PlanetHeaderSubtitleStyle}"
+                    <!-- Planet Gallery -->
+                    <Label
+                    Style="{StaticResource ProfileLabelStyle}"
                     Text="Gallery" />
 
-                <CollectionView
+                    <CollectionView
                     Margin="0,-6,0,0"
                     HeightRequest="160"
                     ItemsSource="{Binding Images}">
 
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout
                             Orientation="Horizontal"
                             ItemSpacing="16" />
-                    </CollectionView.ItemsLayout>
+                        </CollectionView.ItemsLayout>
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Image
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Image
                                 Source="{Binding .}"
                                 Aspect="AspectFill"
                                 HorizontalOptions="Fill"
                                 VerticalOptions="Fill"
                                 WidthRequest="160">
-                                <Image.Clip>
-                                    <RoundRectangleGeometry
+                                    <Image.Clip>
+                                        <RoundRectangleGeometry
                                         Rect="0,0,160,160"
                                         CornerRadius="16" />
-                                </Image.Clip>
-                            </Image>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
+                                    </Image.Clip>
+                                </Image>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
 
-                </CollectionView>
+                    </CollectionView>
 
-            </VerticalStackLayout>
+                </VerticalStackLayout>
 
             </StackLayout>
-            
+
 
         </ScrollView>
     </Grid>

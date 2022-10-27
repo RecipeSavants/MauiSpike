@@ -41,7 +41,7 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.png" ForegroundFile="Resources\AppIcon\appicon.png" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash400a.png" Color="#202020">
+		<MauiSplashScreen Include="Resources\Splash\splash400a.png" Color="#252525">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</MauiSplashScreen>
 
@@ -73,6 +73,22 @@
 	  <None Remove="Resources\Splash\splash.png" />
 	  <None Remove="Resources\Fonts\Metro.otf" />
 	  <None Remove="Resources\Images\splash.png" />
+	  <None Remove="Resources\Fonts\Titillium-BoldUpright.otf" />
+	  <None Remove="Resources\Fonts\Titillium-SemiboldUpright.otf" />
+	  <None Remove="Resources\Fonts\Titillium-RegularUpright.otf" />
+	  <None Remove="Resources\Fonts\Titillium-LightUpright.otf" />
+	  <None Remove="Resources\Fonts\Titillium-ThinUpright.otf" />
+	  <None Remove="Resources\Fonts\Titillium-Black.otf" />
+	  <None Remove="Resources\Fonts\Titillium-BoldItalic.otf" />
+	  <None Remove="Resources\Fonts\Titillium-Bold.otf" />
+	  <None Remove="Resources\Fonts\Titillium-SemiboldItalic.otf" />
+	  <None Remove="Resources\Fonts\Titillium-Semibold.otf" />
+	  <None Remove="Resources\Fonts\Titillium-RegularItalic.otf" />
+	  <None Remove="Resources\Fonts\Titillium-Regular.otf" />
+	  <None Remove="Resources\Fonts\Titillium-LightItalic.otf" />
+	  <None Remove="Resources\Fonts\Titillium-Light.otf" />
+	  <None Remove="Resources\Fonts\Titillium-ThinItalic.otf" />
+	  <None Remove="Resources\Fonts\Titillium-Thin.otf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
@@ -99,6 +115,22 @@
 	  <MauiFont Include="Resources\Fonts\Metro.otf">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </MauiFont>
+	  <MauiFont Include="Resources\Fonts\Titillium-Black.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-Bold.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-BoldItalic.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-BoldUpright.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-Light.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-LightItalic.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-LightUpright.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-Regular.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-RegularItalic.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-RegularUpright.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-Semibold.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-SemiboldItalic.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-SemiboldUpright.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-Thin.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-ThinItalic.otf" />
+	  <MauiFont Include="Resources\Fonts\Titillium-ThinUpright.otf" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Maui.Extensions" Version="6.0.541" />

@@ -14,9 +14,10 @@ public class Planet
     public string Hood { get; set; }
     public string When { get; set; }
     public string Where { get; set; }
-    public string Feet { get; set; }
-    public string Inches { get; set; }
-    public string Weight { get; set; }
+    public int Feet { get; set; }
+    public int Inches { get; set; }
+    public int Weight { get; set; }
+
     // Background
     public Brush Background
     {

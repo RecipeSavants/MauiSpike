@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116.667" height="116.667" viewBox="0 0 116.667 116.667">
   <defs>
     <linearGradient id="linear-gradient" x1="-1.436" y1="-1.092" x2="-1.107" y2="-0.378" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#fefefe"/>
+      <stop offset="1" stop-color="#fefefe" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <g id="Group_27" data-name="Group 27" transform="translate(-50.041 -217.476)">
@@ -28,6 +28,6 @@
       <path id="Path_92" data-name="Path 92" d="M166.661,273.971c-18.48,23.221-51.931,54.364-94.7,47.391a58.319,58.319,0,0,0,94.752-45.552C166.708,275.193,166.681,274.583,166.661,273.971Z" fill="#212a3c" opacity="0.2"/>
     </g>
     <path id="Path_93" data-name="Path 93" d="M133.291,233.459c8.643,14.709-1.2,36.532-21.99,48.746S66.657,292.4,58.016,277.69s1.2-36.534,21.989-48.748S124.648,218.75,133.291,233.459Z" opacity="0.3" fill="url(#linear-gradient)"/>
-    <path id="Path_94" data-name="Path 94" d="M114.192,231.552c5.16,8.785-1.633,22.356-15.175,30.313s-28.7,7.285-33.863-1.5,1.628-22.355,15.172-30.313S109.029,222.766,114.192,231.552Z" fill="#fff" opacity="0.3"/>
+    <path id="Path_94" data-name="Path 94" d="M114.192,231.552c5.16,8.785-1.633,22.356-15.175,30.313s-28.7,7.285-33.863-1.5,1.628-22.355,15.172-30.313S109.029,222.766,114.192,231.552Z" fill="#fefefe" opacity="0.3"/>
   </g>
 </svg>

@@ -22,11 +22,11 @@
                 Grid.Column="0"
                 VerticalOptions="Center">
                 <Label
-                    Style="{StaticResource PageHeaderStyle}"
-                    Text="Let's Explore"/>
+                    Style="{StaticResource SearchTitleStyle}"
+                    Text="Local Guys" FontAttributes="Bold"/>
                 <Label
-                    Style="{StaticResource PageHeaderSubtitleStyle}"
-                    Text="The milky way galaxy"/>
+                    Style="{StaticResource SearchSubStyle}" FontAttributes="Bold"
+                    Text="Muscle Daddies, Leather and Bears"/>
             </VerticalStackLayout>
             <Border
                 WidthRequest="56"
@@ -40,15 +40,15 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="28"/>
                 </Border.StrokeShape>
-                <Border.GestureRecognizers>
+                <!--<Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="ProfilePic_Clicked" />
-                </Border.GestureRecognizers>
+                </Border.GestureRecognizers>-->
                 <Image
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     WidthRequest="50"
                     HeightRequest="50"
-                    Source="profilepic.jpeg">
+                    Source="https://marketingbuddynetworks.blob.core.windows.net/roosters/profile.jpg">
                     <Image.Clip>
                         <EllipseGeometry
                             Center="25,25"
@@ -71,8 +71,8 @@
                         Margin="0,12,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Most Popular   " />
-                                <Span Text="→" FontSize="20" />
+                                <Span TextColor="{StaticResource AccentColor2}" FontAttributes="Bold" Text="Community: Muscle Dads  " />
+                                <Span TextColor="{StaticResource AccentColor2}" FontAttributes="Bold" Text="→" FontSize="20" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -111,12 +111,12 @@
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
-                                            Style="{StaticResource FeaturedPlanetHeaderStyle}"
+                                            Style="{StaticResource BoldUserNameStyle}"
                                             Text="{Binding Name}"
                                             Margin="0,8,0,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
                                         <Label
                                             Grid.Row="2"
-                                            Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                                            Style="{StaticResource SearchSubStyle}"
                                             Text="{Binding Subtitle}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="0,-6,0,16" />
                                     </Grid>
                                 </Border>
@@ -128,8 +128,8 @@
                         Margin="0,12,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="You may also like   "  />
-                                <Span Text="→" FontSize="20" />
+                                <Span TextColor="#fdc953" Text="Community: Leather  " FontSize="20" FontAttributes="Bold"  />
+                                <Span TextColor="#fdc953" Text="→" FontSize="20" FontAttributes="Bold" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -168,7 +168,7 @@
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
-                                            Style="{StaticResource AllPlanetHeaderStyle}"
+                                            Style="{StaticResource UserNameStyle}"
                                             Text="{Binding Name}"
                                             HorizontalTextAlignment="Center"
                                             Margin="0,2,0,8"/>
@@ -183,8 +183,8 @@
                         Margin="0,12,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="You may also like   "  />
-                                <Span Text="→" FontSize="20" />
+                                <Span TextColor="#fdc953"  Text="Community: Bears  " FontSize="20" FontAttributes="Bold"  />
+                                <Span TextColor="#fdc953"  Text="→" FontSize="20" FontAttributes="Bold" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -223,7 +223,7 @@
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
-                                            Style="{StaticResource AllPlanetHeaderStyle}"
+                                            Style="{StaticResource UserNameStyle}"
                                             Text="{Binding Name}"
                                             HorizontalTextAlignment="Center"
                                             Margin="0,2,0,8"/>
@@ -237,17 +237,17 @@
             <!-- Bottom Tab Bar -->
             <Border
                 Padding="16,0"
-                BackgroundColor="#393965"
+                BackgroundColor="{StaticResource AccentColor4}"
                 Stroke="{StaticResource BorderColor}"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
                 Margin="0,40,0,20"
-                HeightRequest="90"
+                HeightRequest="60"
                 Grid.Row="1"
                 Grid.Column="0"
                 Grid.ColumnSpan="2">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="45"/>
+                    <RoundRectangle CornerRadius="30"/>
                 </Border.StrokeShape>
                 <Grid
                     HorizontalOptions="Fill"
@@ -257,8 +257,8 @@
                     RowSpacing="6">
 
                     <Image
-                        WidthRequest="30"
-                        HeightRequest="30"
+                        WidthRequest="20"
+                        HeightRequest="20"
                         Source="imgexplore.png"
                         Grid.Row="0"
                         Grid.Column="0"
@@ -271,8 +271,8 @@
                         Style="{StaticResource MenuLabelStyle}" />
 
                     <Image
-                        WidthRequest="30"
-                        HeightRequest="30"
+                        WidthRequest="20"
+                        HeightRequest="20"
                         Source="imgfavorite.png"
                         Grid.Row="0"
                         Grid.Column="1"
@@ -285,8 +285,8 @@
                         Style="{StaticResource MenuLabelStyle}" />
 
                     <Image
-                        WidthRequest="30"
-                        HeightRequest="30"
+                        WidthRequest="20"
+                        HeightRequest="20"
                         Source="imgprofile.png"
                         Grid.Row="0"
                         Grid.Column="2"

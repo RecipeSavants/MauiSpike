@@ -4,7 +4,7 @@
              x:Class="BuddyNetworks.Roosters.Views.StartPage2"
              Title="StartPage2">
     <Grid>
-        <Image Aspect="Center" Source="splash.png"></Image>
+        <Image Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="https://marketingbuddynetworks.blob.core.windows.net/roosters/splash2.png"></Image>
         <Grid>
             <Border
             x:Name="frmIntro"
@@ -24,19 +24,32 @@
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     Style="{StaticResource IntroPageHeaderStyle}"
-                    Text="Hello!"/>
+                    Text="Howdy!"/>
                     <Label
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"
                     Style="{StaticResource IntroPageTextStyle}"
-                    Text="Want to know and explain all things about the planets in the Milky Way galaxy?"/>
-                    <Button
+                    Text="Are you looking to meet up with guys in your hood who meet your exact criteras?"/>
+                    <FlexLayout JustifyContent="Center" AlignContent="Center">
+                                                <Button
                     Style="{StaticResource ButtonStyle}"
-                    Text="Explore Now"
-                    HorizontalOptions="Center"
+                    Text="Sign Up" FlexLayout.AlignSelf="Center"
+                    
                     Margin="0,12,0,6"
                     Clicked="ExploreNow_Clicked"/>
+                        <Button FlexLayout.AlignSelf="Center"
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Log In" 
+                    HorizontalOptions="Center"
+                    Margin="12,12,0,6"
+                    Clicked="ExploreNow_Clicked"/>
+
+                    </FlexLayout>
+
+
+
+
                 </VerticalStackLayout>
             </Border>
         </Grid>
