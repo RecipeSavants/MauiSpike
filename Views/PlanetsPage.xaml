@@ -7,6 +7,23 @@
     x:Class="MauiPlanets.Views.PlanetsPage"
     Title="Maui Planets">
 
+        <ContentPage.Resources>
+        <Style TargetType="Border">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
     <Grid
         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
         <Grid
@@ -136,7 +153,7 @@
                     <CollectionView
                         x:Name="lstAllPlanets3"
                         HeightRequest="160"
-                        SelectionMode="Single"
+                        SelectionMode="Single" BackgroundColor="#252525"
                         SelectionChanged="Planets_SelectionChanged">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout

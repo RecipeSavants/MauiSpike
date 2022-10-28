@@ -86,7 +86,7 @@
                     HorizontalOptions="Fill"
                     HeightRequest="2"
                     Stroke="Transparent"
-                    Fill="{StaticResource LightBorderColor}" />
+                    Fill="{StaticResource AccentColor5}" />
 
                                         <!-- Planet Info -->
                     <Label Style="{StaticResource ProfileLabelStyle}" Text="When &amp; Where" />
@@ -114,7 +114,7 @@
                     HorizontalOptions="Fill"
                     HeightRequest="2"
                     Stroke="Transparent"
-                    Fill="{StaticResource LightBorderColor}" />
+                    Fill="{StaticResource AccentColor5}" />
 
                     <!-- Planet Gallery -->
                     <Label

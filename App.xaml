@@ -10,7 +10,7 @@
         <Color x:Key="FrameBackgroundColor">#252525</Color>
         <Color x:Key="ButtonBackgroundColor">#010e74</Color>
         <Color x:Key="BorderColor">Transparent</Color>
-        <Color x:Key="LightBorderColor">#252525</Color>
+        <Color x:Key="LightBorderColor">#fefefe</Color>
         <Color x:Key="LightTextColor">#fefefe</Color>
         <Color x:Key="DarkTextColor">#252525</Color>
         <Color x:Key="AccentColor">#ff9800</Color>

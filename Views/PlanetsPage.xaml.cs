@@ -5,9 +5,9 @@ public partial class PlanetsPage : ContentPage
     private const uint AnimationDuration = 800u;
 
     public PlanetsPage()
-	{
-		InitializeComponent();
-	}
+    {
+        InitializeComponent();
+    }
 
     protected override void OnAppearing()
     {
@@ -17,11 +17,19 @@ public partial class PlanetsPage : ContentPage
         //lstAllPlanets.ItemsSource = PlanetsService.GetAllPlanets();
         lstAllPlanets2.ItemsSource = PlanetsService.GetAllPlanets();
         lstAllPlanets3.ItemsSource = PlanetsService.GetAllPlanets();
+        //lstAllPlanets3.SelectedItem = null;
+
     }
 
     async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
     {
-        await Navigation.PushAsync(new PlanetDetailsPage(e.CurrentSelection.First() as Planet));
+        var y = sender as CollectionView;
+        var x = e.CurrentSelection.FirstOrDefault() as Planet;
+        if(x!=null)
+        {
+            await Navigation.PushAsync(new PlanetDetailsPage(x));
+            y.SelectedItem = null;
+        }
     }
 
     async void ProfilePic_Clicked(System.Object sender, System.EventArgs e)
