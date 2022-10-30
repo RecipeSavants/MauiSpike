@@ -89,6 +89,7 @@
 	  <None Remove="Resources\Fonts\Titillium-Light.otf" />
 	  <None Remove="Resources\Fonts\Titillium-ThinItalic.otf" />
 	  <None Remove="Resources\Fonts\Titillium-Thin.otf" />
+	  <None Remove="BuddyNetworks.Roosters.CosmosClient" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
@@ -135,6 +136,7 @@
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Maui.Extensions" Version="6.0.541" />
 	  <PackageReference Include="Microsoft.Maui.Dependencies" Version="6.0.541" />
+	  <PackageReference Include="BuddyNetworks.Roosters.CosmosClient" Version="1.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiImage Update="Resources\Images\splash.png">

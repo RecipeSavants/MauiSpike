@@ -157,6 +157,71 @@
 
 
         </ScrollView>
+                    <!-- Bottom Tab Bar -->
+            <Border
+                Padding="16,0"
+                BackgroundColor="{StaticResource AccentColor4}"
+                Stroke="{StaticResource BorderColor}"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Margin="0,40,0,20"
+                HeightRequest="60"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30"/>
+                </Border.StrokeShape>
+                <Grid
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    RowDefinitions="Auto,Auto"
+                    ColumnDefinitions="*,*,*"
+                    RowSpacing="6">
+
+                    <Image
+                        WidthRequest="20"
+                        HeightRequest="20"
+                        Source="imgexplore.png"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Explore"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}" />
+
+                    <Image
+                        WidthRequest="20"
+                        HeightRequest="20"
+                        Source="imgfavorite.png"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Favorite"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}" />
+
+                    <Image
+                        WidthRequest="20"
+                        HeightRequest="20"
+                        Source="imgprofile.png"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Profile"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}" />
+                </Grid>
+            </Border>
     </Grid>
 
 </ContentPage>
