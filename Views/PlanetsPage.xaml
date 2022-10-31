@@ -63,7 +63,7 @@
                 Grid.ColumnSpan="2"
                 HorizontalScrollBarVisibility="Never"
                 VerticalScrollBarVisibility="Default"
-                Margin="0,32,-24,150">
+                Margin="0,32,-24,64">
                 <VerticalStackLayout
                     Spacing="12">
                     <Label
