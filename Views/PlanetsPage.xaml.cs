@@ -1,35 +1,22 @@
-﻿namespace MauiPlanets.Views;
+﻿using BuddyNetworks.Roosters.ViewModels;
+
+namespace MauiPlanets.Views;
 
 public partial class PlanetsPage : ContentPage
 {
     private const uint AnimationDuration = 800u;
+    private GridViewModel _viewModel;
 
     public PlanetsPage()
     {
         InitializeComponent();
+        BindingContext = _viewModel = new GridViewModel(this);
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
-
-        this.lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
-        //lstAllPlanets.ItemsSource = PlanetsService.GetAllPlanets();
-        lstAllPlanets2.ItemsSource = PlanetsService.GetAllPlanets();
-        lstAllPlanets3.ItemsSource = PlanetsService.GetAllPlanets();
-        //lstAllPlanets3.SelectedItem = null;
-
-    }
-
-    async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
-    {
-        var y = sender as CollectionView;
-        var x = e.CurrentSelection.FirstOrDefault() as Planet;
-        if(x!=null)
-        {
-            await Navigation.PushAsync(new PlanetDetailsPage(x));
-            y.SelectedItem = null;
-        }
+        _viewModel.OnAppearing();
     }
 
     async void ProfilePic_Clicked(System.Object sender, System.EventArgs e)

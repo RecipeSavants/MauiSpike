@@ -21,7 +21,7 @@ internal static class PlanetsService
 		},
         new()
         {
-            Name = "Pornstach",
+            Name = "BeardLover",
             Subtitle = "Versatile Mustache Rider",
             HeroImage = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0001_2.jpg",
             Description = "Of all the planets, Venus is the one most similar to Earth. In fact, Venus is often called Earth's “sister” planet. As similar as it is in some ways, however, it is also very different in others.",
@@ -136,13 +136,13 @@ internal static class PlanetsService
         }
     };
 
-	public static List<Planet> GetAllPlanets()
+	public async static Task<List<Planet>> GetAllPlanets()
 		=> planets;
 
     public static Planet GetPlanet(string planetName)
 		=> planets.Where(_planet => _planet.Name == planetName).FirstOrDefault();
 
-    public static List<Planet> GetFeaturedPlanets()
+    public async static Task<List<Planet>> GetFeaturedPlanets()
     {
         var rnd = new Random();
         var randomizedPlanets = planets.OrderBy(item => rnd.Next());

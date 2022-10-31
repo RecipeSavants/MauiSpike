@@ -2,27 +2,10 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    
+    x:Name="page"
     xmlns:models="clr-namespace:MauiPlanets.Models"
     x:Class="MauiPlanets.Views.PlanetsPage"
     Title="Maui Planets">
-
-        <ContentPage.Resources>
-        <Style TargetType="Border">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor"
-                                        Value="Transparent" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
-    </ContentPage.Resources>
 
     <Grid
         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
@@ -94,10 +77,9 @@
                         </Label.FormattedText>
                     </Label>
                     <CollectionView
-                        x:Name="lstPopularPlanets"
                         HeightRequest="280"
-                        SelectionMode="Single"
-                        SelectionChanged="Planets_SelectionChanged">
+                        ItemsSource="{Binding List1}"
+                        SelectionMode="None">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout
                                 Orientation="Horizontal"
@@ -106,20 +88,21 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate
                                 x:DataType="models:Planet">
-                                <Border
-                                    VerticalOptions="Fill"
-                                    HorizontalOptions="Fill"
-                                    HeightRequest="220"
-                                    WidthRequest="220"
-                                    StrokeThickness="0"
-                                    Background="{Binding Background}"
-                                    Padding="0">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="24"/>
-                                    </Border.StrokeShape>
+                                <StackLayout>
+
+                                 <Frame
+                                        Padding="0,0,0,-35"
+                                        BackgroundColor="Black"
+                                        CornerRadius="24"
+                                        HeightRequest="260"
+                                        IsClippedToBounds="True"
+                                        WidthRequest="220">
                                     <Grid
-                                        RowDefinitions="*,Auto,Auto"
+                                        RowDefinitions="200,Auto,Auto"
                                         RowSpacing="4">
+                                          <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding BindingContext.SelectionChangedCommand, Source={Reference page}}" CommandParameter="{Binding .}" />
+                                            </Grid.GestureRecognizers>
                                         <Image
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
@@ -136,25 +119,26 @@
                                             Style="{StaticResource SearchSubStyle}"
                                             Text="{Binding Subtitle}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="0,-6,0,16" />
                                     </Grid>
-                                </Border>
+                                </Frame>
+                                </StackLayout>
+
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                    <Label
+                                        <Label
                         Style="{StaticResource PageSubHeaderStyle}"
                         Margin="0,12,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span TextColor="#fdc953" Text="Community: Leather  " FontSize="20" FontAttributes="Bold"  />
-                                <Span TextColor="#fdc953" Text="→" FontSize="20" FontAttributes="Bold" />
+                                <Span TextColor="{StaticResource AccentColor2}" FontAttributes="Bold" Text="Community: Leather  " />
+                                <Span TextColor="{StaticResource AccentColor2}" FontAttributes="Bold" Text="→" FontSize="20" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                     <CollectionView
-                        x:Name="lstAllPlanets3"
-                        HeightRequest="160"
-                        SelectionMode="Single" BackgroundColor="#252525"
-                        SelectionChanged="Planets_SelectionChanged">
+                        HeightRequest="280"
+                        ItemsSource="{Binding List2}"
+                        SelectionMode="None">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout
                                 Orientation="Horizontal"
@@ -163,53 +147,57 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate
                                 x:DataType="models:Planet">
-                                <Border
-                                    VerticalOptions="Fill"
-                                    HorizontalOptions="Fill"
-                                    HeightRequest="140"
-                                    WidthRequest="140"
-                                    StrokeThickness="0"
-                                    Background="{Binding Background}"
-                                    Padding="0">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="24"/>
-                                    </Border.StrokeShape>
+                                <StackLayout>
+
+                                 <Frame
+                                        Padding="0,0,0,-35"
+                                        BackgroundColor="Black"
+                                        CornerRadius="24"
+                                        HeightRequest="260"
+                                        IsClippedToBounds="True"
+                                        WidthRequest="220">
                                     <Grid
-                                        RowDefinitions="*,Auto,Auto"
+                                        RowDefinitions="200,Auto,Auto"
                                         RowSpacing="4">
+                                          <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding BindingContext.SelectionChangedCommand, Source={Reference page}}" CommandParameter="{Binding .}" />
+                                            </Grid.GestureRecognizers>
                                         <Image
-                                            Grid.Row="0" 
+                                            Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Aspect="AspectFill"                                        
+                                            Aspect="AspectFill"
                                             VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
-                                            Style="{StaticResource UserNameStyle}"
+                                            Style="{StaticResource BoldUserNameStyle}"
                                             Text="{Binding Name}"
-                                            HorizontalTextAlignment="Center"
-                                            Margin="0,2,0,8"/>
+                                            Margin="0,8,0,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                        <Label
+                                            Grid.Row="2"
+                                            Style="{StaticResource SearchSubStyle}"
+                                            Text="{Binding Subtitle}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="0,-6,0,16" />
                                     </Grid>
-                                </Border>
+                                </Frame>
+                                </StackLayout>
+
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                     <!--More Section--> 
-                    <Label
+                                        <Label
                         Style="{StaticResource PageSubHeaderStyle}"
                         Margin="0,12,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span TextColor="#fdc953"  Text="Community: Bears  " FontSize="20" FontAttributes="Bold"  />
-                                <Span TextColor="#fdc953"  Text="→" FontSize="20" FontAttributes="Bold" />
+                                <Span TextColor="{StaticResource AccentColor2}" FontAttributes="Bold" Text="Community: Bears  " />
+                                <Span TextColor="{StaticResource AccentColor2}" FontAttributes="Bold" Text="→" FontSize="20" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                     <CollectionView
-                        x:Name="lstAllPlanets2"
-                        HeightRequest="160"
-                        SelectionMode="Single"
-                        SelectionChanged="Planets_SelectionChanged">
+                        HeightRequest="280"
+                        ItemsSource="{Binding List3}"
+                        SelectionMode="None">
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout
                                 Orientation="Horizontal"
@@ -218,34 +206,40 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate
                                 x:DataType="models:Planet">
-                                <Border
-                                    VerticalOptions="Fill"
-                                    HorizontalOptions="Fill"
-                                    HeightRequest="140"
-                                    WidthRequest="140"
-                                    StrokeThickness="0"
-                                    Background="{Binding Background}"
-                                    Padding="0">
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="24"/>
-                                    </Border.StrokeShape>
+                                <StackLayout>
+
+                                 <Frame
+                                        Padding="0,0,0,-35"
+                                        BackgroundColor="Black"
+                                        CornerRadius="24"
+                                        HeightRequest="260"
+                                        IsClippedToBounds="True"
+                                        WidthRequest="220">
                                     <Grid
-                                        RowDefinitions="*,Auto,Auto"
+                                        RowDefinitions="200,Auto,Auto"
                                         RowSpacing="4">
+                                          <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding BindingContext.SelectionChangedCommand, Source={Reference page}}" CommandParameter="{Binding .}" />
+                                            </Grid.GestureRecognizers>
                                         <Image
-                                            Grid.Row="0" 
+                                            Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Aspect="AspectFill"                                        
+                                            Aspect="AspectFill"
                                             VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
-                                            Style="{StaticResource UserNameStyle}"
+                                            Style="{StaticResource BoldUserNameStyle}"
                                             Text="{Binding Name}"
-                                            HorizontalTextAlignment="Center"
-                                            Margin="0,2,0,8"/>
+                                            Margin="0,8,0,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                        <Label
+                                            Grid.Row="2"
+                                            Style="{StaticResource SearchSubStyle}"
+                                            Text="{Binding Subtitle}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="0,-6,0,16" />
                                     </Grid>
-                                </Border>
+                                </Frame>
+                                </StackLayout>
+
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>

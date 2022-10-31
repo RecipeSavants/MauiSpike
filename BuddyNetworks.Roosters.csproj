@@ -90,6 +90,8 @@
 	  <None Remove="Resources\Fonts\Titillium-ThinItalic.otf" />
 	  <None Remove="Resources\Fonts\Titillium-Thin.otf" />
 	  <None Remove="BuddyNetworks.Roosters.CosmosClient" />
+	  <None Remove="BuddyNetworks.Roosters.ServiceModels" />
+	  <None Remove="Platforms\Android\Resources\drawable\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
@@ -97,6 +99,7 @@
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Resources\Styles\" />
 	  <Folder Include="Services\" />
+	  <Folder Include="Platforms\Android\Resources\drawable\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="Views\PlanetsPage.xaml">
@@ -137,6 +140,7 @@
 	  <PackageReference Include="Microsoft.Maui.Extensions" Version="6.0.541" />
 	  <PackageReference Include="Microsoft.Maui.Dependencies" Version="6.0.541" />
 	  <PackageReference Include="BuddyNetworks.Roosters.CosmosClient" Version="1.0.0" />
+	  <PackageReference Include="BuddyNetworks.Roosters.ServiceModels" Version="1.1.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiImage Update="Resources\Images\splash.png">
