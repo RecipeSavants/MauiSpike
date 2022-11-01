@@ -19,6 +19,28 @@
         <Color x:Key="AccentColor4">#010e74</Color>
         <Color x:Key="AccentColor5">#fefefe</Color>
 
+        <OnPlatform x:Key="UniPadding" x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="0, 0, 0, 0" />
+                <On Platform="Android" Value="0, 0, 0, 30" />
+                <On Platform="UWP" Value="0, 0, 0, 0" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+
+        <OnPlatform x:Key="MainCardMarginMainLine" x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="0,8,0,8" />
+                <On Platform="Android" Value="0, -2, 0, 16" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+
+        <OnPlatform x:Key="MainCardMarginSubLine" x:TypeArguments="Thickness">
+            <OnPlatform.Platforms>
+                <On Platform="iOS" Value="0, -14, 0, 0" />
+                <On Platform="Android" Value="0, -26, 0, -16" />
+            </OnPlatform.Platforms>
+        </OnPlatform>
+
         <!-- Content Page Style -->
         <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
             <Setter Property="NavigationPage.HasNavigationBar" Value="False" />

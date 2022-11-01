@@ -120,11 +120,16 @@
                                             Grid.Row="1"
                                             Style="{StaticResource BoldUserNameStyle}"
                                             Text="{Binding Name}"
-                                            Margin="0,8,0,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                            Margin="{StaticResource MainCardMarginMainLine}"
+                                            HorizontalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center"/>
                                         <Label
                                             Grid.Row="2"
                                             Style="{StaticResource SearchSubStyle}"
-                                            Text="{Binding Subtitle}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="0,-6,0,16" />
+                                            Text="{Binding Subtitle}"
+                                            HorizontalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center"
+                                            Margin="{StaticResource MainCardMarginSubLine}" />
                                     </Grid>
                                 </Frame>
                                 </StackLayout>

@@ -41,7 +41,7 @@
             Grid.ColumnSpan="2"
             HorizontalScrollBarVisibility="Never"
             VerticalScrollBarVisibility="Never"
-            Margin="0,16,0,16">
+            Margin="0,16,0,64">
             <StackLayout>
                 <VerticalStackLayout
                 Spacing="18">
