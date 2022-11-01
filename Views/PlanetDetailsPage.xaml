@@ -8,7 +8,7 @@
     Title="Planet Details">
 
     <Grid
-        Margin="24,0,24,0"
+        Margin="24,48,24,16"
         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
         ColumnDefinitions="*,*"
         RowDefinitions="Auto,*">
@@ -41,7 +41,7 @@
             Grid.ColumnSpan="2"
             HorizontalScrollBarVisibility="Never"
             VerticalScrollBarVisibility="Never"
-            Margin="0,16,0,0">
+            Margin="0,16,0,16">
             <StackLayout>
                 <VerticalStackLayout
                 Spacing="18">
@@ -123,6 +123,7 @@
 
                     <CollectionView
                     Margin="0,-6,0,50"
+
                     HeightRequest="160"
                     ItemsSource="{Binding Images}">
 
@@ -164,7 +165,7 @@
                 Stroke="{StaticResource BorderColor}"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
-                Margin="0,40,0,20"
+                Margin="0,55,0,20"
                 HeightRequest="60"
                 Grid.Row="1"
                 Grid.Column="0"
