@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuddyNetworks.Roosters", "BuddyNetworks.Roosters.csproj", "{974972D8-5088-4AAF-91A8-FFEED3ED598C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuddyNetworks.Roosters.Android", "Android\BuddyNetworks.Roosters.Android.csproj", "{81F45749-C70B-4A13-A08A-73A7DAA7BAB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuddyNetworks.Roosters.iOS", "iOS\BuddyNetworks.Roosters.iOS.csproj", "{24D05E4F-48FC-4C67-AA1B-E3188BCE6E05}"
