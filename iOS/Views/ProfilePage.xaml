@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BuddyNetworks.Roosters.Views.ProfilePage"
+    xmlns:models="clr-namespace:BuddyNetworks.Roosters.CosmosClient.Models;assembly=BuddyNetworks.Roosters.CosmosClient"
+    x:DataType="models:Profile"
+    >
+
+    <Grid
+        Margin="24,48,24,16"
+        IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+        ColumnDefinitions="*,*"
+        RowDefinitions="Auto,*">
+
+        <!-- Header Icons -->
+        <ImageButton
+            WidthRequest="24"
+            HeightRequest="24"
+            Source="imgback.png"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Clicked="BackButton_Clicked" />
+
+        <ImageButton
+            WidthRequest="24"
+            HeightRequest="24"
+            Source="imgmenu.png"
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalOptions="End"
+            VerticalOptions="Center" />
+
+
+        <!-- Main Content ScrollView -->
+        <ScrollView
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalScrollBarVisibility="Never"
+            VerticalScrollBarVisibility="Never"
+            Margin="0,16,0,64">
+            <StackLayout>
+                <VerticalStackLayout
+                Spacing="18">
+                    <!-- Hero Image -->
+                    <Image
+                    Source="{Binding PrimaryPhoto.Uri}"
+                    Aspect="AspectFill"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"
+                    HeightRequest="500"
+                    WidthRequest="500"
+                    Margin="24,0" />
+
+                    <!-- User Name -->
+                    <Label
+                    Style="{StaticResource BoldUserNameStyle}" FontSize="48"
+                    Text="{Binding UserName}"
+                    Margin="0,-4,0,0"/>
+
+                    <!-- Headline -->
+                    <Label
+                    Margin="0,-16,0,0"
+                    Style="{StaticResource ProfileSubStyle}"
+                    Text="{Binding Headline}" />
+
+                    <!-- Slug Line -->
+                    <Label
+                    Margin="0,-12,0,0"
+                    Style="{StaticResource ProfileText}">
+                    <Label.Text>
+                        <MultiBinding StringFormat="{}{0} :: {1} &quot; {2} &apos; :: {3}">
+                            <Binding Path="DisplayAge"/>
+                            <Binding Path="Feet"/>
+                            <Binding Path="Inches"/>
+                            <Binding Path="Weight"/>
+                        </MultiBinding>
+                        </Label.Text>
+                    </Label>
+
+                    <!-- Divider -->
+                    <Rectangle
+                    HorizontalOptions="Fill"
+                    HeightRequest="2"
+                    Stroke="Transparent"
+                    Fill="{StaticResource AccentColor5}" />
+
+                                        <!-- Planet Info -->
+                    <Label Style="{StaticResource ProfileLabelStyle}" Text="When &amp; Where" />
+                    <Label
+                    Margin="0,-10,0,0"
+                    Style="{StaticResource ProfileText}">
+                    <Label.Text>
+                        <MultiBinding StringFormat="{}{0} :: {1}">
+                            <Binding Path="When"/>
+                            <Binding Path="Where"/>
+                        </MultiBinding>
+                        </Label.Text>
+                    </Label>
+
+                    <!-- Planet Info -->
+                    <Label Style="{StaticResource ProfileLabelStyle}" Text="More about me" />
+                    <Label
+                    Style="{StaticResource ProfileText}"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding MoreAboutMe}" Margin="0,-10,0,0" />
+
+
+                    <!-- Divider -->
+                    <Rectangle
+                    HorizontalOptions="Fill"
+                    HeightRequest="2"
+                    Stroke="Transparent"
+                    Fill="{StaticResource AccentColor5}" />
+
+                    <!-- Planet Gallery -->
+                    <Label
+                    Style="{StaticResource ProfileLabelStyle}"
+                    Text="Gallery" />
+
+                    <!--<CollectionView
+                    Margin="0,-6,0,50"
+
+                    HeightRequest="160"
+                    ItemsSource="{Binding Images}">
+
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout
+                            Orientation="Horizontal"
+                            ItemSpacing="16" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Image
+                                Source="{Binding .}"
+                                Aspect="AspectFill"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill"
+                                WidthRequest="160">
+                                    <Image.Clip>
+                                        <RoundRectangleGeometry
+                                        Rect="0,0,160,160"
+                                        CornerRadius="16" />
+                                    </Image.Clip>
+                                </Image>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>-->
+
+                </VerticalStackLayout>
+
+            </StackLayout>
+
+
+        </ScrollView>
+                    <!-- Bottom Tab Bar -->
+            <Border
+                Padding="16,25,16,25"
+                BackgroundColor="{StaticResource AccentColor4}"
+                Stroke="{StaticResource BorderColor}"
+                HorizontalOptions="Fill"
+                VerticalOptions="End"
+                Margin="0,55,0,20"
+                HeightRequest="60"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30"/>
+                </Border.StrokeShape>
+                <Grid
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    RowDefinitions="Auto,Auto"
+                    ColumnDefinitions="*,*,*"
+                    RowSpacing="6">
+
+                    <Image
+                        WidthRequest="20"
+                        HeightRequest="20"
+                        Source="imgexplore.png"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Explore"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}" />
+
+                    <Image
+                        WidthRequest="20"
+                        HeightRequest="20"
+                        Source="imgfavorite.png"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Favorite"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}" />
+
+                    <Image
+                        WidthRequest="20"
+                        HeightRequest="20"
+                        Source="imgprofile.png"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Profile"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MenuLabelStyle}" />
+                </Grid>
+            </Border>
+    </Grid>
+
+</ContentPage>
