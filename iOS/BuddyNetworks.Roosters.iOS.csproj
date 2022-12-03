@@ -32,6 +32,7 @@
 	  <EnableCodeSigning>false</EnableCodeSigning>
 	  <CodesignKey>iPhone Developer</CodesignKey>
 	  <CodesignProvision>Automatic</CodesignProvision>
+	  <CreatePackage>false</CreatePackage>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	  <WarningLevel>4</WarningLevel>

@@ -11,6 +11,7 @@ public class DataService
     {
         photos = new Dictionary<string, Photo>();
         photos.Add("BootSlut", new Photo() { Uri = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0006_7.jpg" });
+        photos.Add("CumWhore", new Photo() { Uri = "https://marketingbuddynetworks.blob.core.windows.net/roosters/m_0005_6.jpg" });
         profiles = new List<Profile>()
         {
             new Profile()
@@ -27,6 +28,21 @@ public class DataService
             Feet = 5,
             Inches = 9,
             Weight = 205,
+            },
+            new Profile()
+            {
+            UserName = "CumWhore",
+            Headline = "Hunky and Hairy TOTAL Bottom",
+            PrimaryPhoto = photos.Where(w=>w.Key=="CumWhore").FirstOrDefault().Value,
+            MoreAboutMe = "Breed and Seed and Leave!",
+            DisplayAge=  45,
+            Location=  "Chicago, Il",
+            Hood = "Old Town",
+            When = 1,
+            Where = 1,
+            Feet = 5,
+            Inches = 9,
+            Weight = 195,
             }
         };
     }
