@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;</TargetFrameworks>
+		<TargetFrameworks>net6.0-ios15.2</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>BuddyNetworks.Roosters.iOS</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -19,7 +19,7 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
@@ -36,6 +36,20 @@
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 	  <WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios15.4|AnyCPU'">
+	  <MtouchLink>None</MtouchLink>
+	  <EnableSGenConc>True</EnableSGenConc>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios15.4|AnyCPU'">
+	  <MtouchLink>None</MtouchLink>
+	  <EnableSGenConc>True</EnableSGenConc>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios15.2|AnyCPU'">
+	  <EnableSGenConc>True</EnableSGenConc>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios15.2|AnyCPU'">
+	  <EnableSGenConc>True</EnableSGenConc>
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
@@ -95,11 +109,9 @@
 	  <None Remove="Platforms\Android\Resources\drawable\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Models\" />
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Resources\Styles\" />
-	  <Folder Include="Services\" />
 	  <Folder Include="Platforms\Android\Resources\drawable\" />
 	</ItemGroup>
 	<ItemGroup>
@@ -140,8 +152,6 @@
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Maui.Extensions" Version="6.0.541" />
 	  <PackageReference Include="Microsoft.Maui.Dependencies" Version="6.0.541" />
-	  <PackageReference Include="BuddyNetworks.Roosters.CosmosClient" Version="1.0.0" />
-	  <PackageReference Include="BuddyNetworks.Roosters.ServiceModels" Version="1.1.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiImage Update="Resources\Images\splash.png">
