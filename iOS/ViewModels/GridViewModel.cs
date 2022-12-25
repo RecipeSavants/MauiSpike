@@ -1,40 +1,74 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using BuddyNetworks.Roosters.CosmosClient.Models;
-using MauiPlanets.Models;
+using BuddyNetworks.Roosters.Core.Models;
+using BuddyNetworks.Roosters.Core.Services;
 
-namespace BuddyNetworks.Roosters.ViewModels
+namespace BuddyNetworks.Roosters.iOS.ViewModels
 {
 	public class GridViewModel:BindableObject
 	{
         public Page Page { get; set; }
         public Command SelectionChangedCommand { get => new Command(SelectionChanged); }
-        private ObservableCollection<Profile> _list1;
-        private ObservableCollection<Profile> _list2;
-        private ObservableCollection<Profile> _list3;
+        private ObservableCollection<Profile> _featuredProfiles;
+        private ObservableCollection<Profile> _community1;
+        private ObservableCollection<Profile> _community2;
+        private ObservableCollection<Profile> _allProfiles;
+        private List<string> _communities;
+        private string _communityLabel1;
+        private string _communityLabel2;
+        private string _communityLabel;
 
+        public GridViewModel()
+        {
+            _communities = new List<string>();
+        }
 
         public GridViewModel(Page page)
 		{
+            _communities = new List<string>();
             Page = page;
 		}
 
-        public ObservableCollection<Profile> List1
+        public string Communities
         {
-            get => _list1;
-            set { _list1 = value; OnPropertyChanged(); }
+            get => _communityLabel;
+            set { _communityLabel = value; OnPropertyChanged(); }
         }
 
-        public ObservableCollection<Profile> List2
+        public string CommunityLabel1
         {
-            get => _list2;
-            set { _list2 = value; OnPropertyChanged(); }
+            get => _communityLabel1;
+            set { _communityLabel1 = value; OnPropertyChanged(); }
         }
 
-        public ObservableCollection<Profile> List3
+        public string CommunityLabel2
         {
-            get => _list3;
-            set { _list3 = value; OnPropertyChanged(); }
+            get => _communityLabel2;
+            set { _communityLabel2 = value; OnPropertyChanged(); }
+        }
+
+        public ObservableCollection<Profile> FeaturedProfiles
+        {
+            get => _featuredProfiles;
+            set { _featuredProfiles = value; OnPropertyChanged(); }
+        }
+
+        public ObservableCollection<Profile> Community1
+        {
+            get => _community1;
+            set { _community1 = value; OnPropertyChanged(); }
+        }
+
+        public ObservableCollection<Profile> Community2
+        {
+            get => _community2;
+            set { _community2 = value; OnPropertyChanged(); }
+        }
+
+        public ObservableCollection<Profile> AllProfiles
+        {
+            get => _allProfiles;
+            set { _allProfiles = value; OnPropertyChanged(); }
         }
 
         #region private methods
@@ -60,9 +94,15 @@ namespace BuddyNetworks.Roosters.ViewModels
                 var t1 = Task.Run(async () => p = await data.GetFeaturedProfiles());
                 var t2 = Task.Run(async () => allP = await data.GetProfiles());
                 await Task.WhenAll(t1, t2);
-                List1 = new ObservableCollection<Profile>(p);
-                List2 = new ObservableCollection<Profile>(allP);
-                List3 = new ObservableCollection<Profile>(allP);
+                FeaturedProfiles = new ObservableCollection<Profile>(p);
+                Community1 = new ObservableCollection<Profile>(allP.Where(w => w.Communities.Contains("Leather Guys")).ToList());
+                Community2 = new ObservableCollection<Profile>(allP.Where(w => w.Communities.Contains("Muscle Guys")).ToList());
+                AllProfiles = new ObservableCollection<Profile>(allP);
+                _communities.Add("Muscle Guys");
+                _communities.Add("Leather Guys");
+                CommunityLabel1 = "Leather Guys ";
+                CommunityLabel2 = "Muscle Guys ";
+                Communities = String.Join(",", _communities);
             }
             catch (Exception ex)
             {

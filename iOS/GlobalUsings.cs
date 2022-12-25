@@ -11,4 +11,5 @@ global using global::Microsoft.Maui.Graphics;
 global using global::Microsoft.Maui.LifecycleEvents;
 
 global using BuddyNetworks.Roosters.Views;
-global using BuddyNetworks.Roosters.Services;
+global using BuddyNetworks.Roosters.Core.Services;
+global using BuddyNetworks.Roosters.Core.Models;

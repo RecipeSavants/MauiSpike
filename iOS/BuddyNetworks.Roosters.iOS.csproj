@@ -47,6 +47,9 @@
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios15.2|AnyCPU'">
 	  <EnableSGenConc>True</EnableSGenConc>
+	  <CreatePackage>false</CreatePackage>
+	  <CodesignProvision>Automatic</CodesignProvision>
+	  <CodesignKey>iPhone Developer</CodesignKey>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios15.2|AnyCPU'">
 	  <EnableSGenConc>True</EnableSGenConc>
@@ -157,5 +160,8 @@
 	  <MauiImage Update="Resources\Images\splash.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </MauiImage>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\BuddyNetworks.Roosters.Core\BuddyNetworks.Roosters.Core.csproj" />
 	</ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-﻿using BuddyNetworks.Roosters.CosmosClient.Models;
+﻿using BuddyNetworks.Roosters.Core.Models;
 
 namespace BuddyNetworks.Roosters.Views;
 

@@ -1,4 +1,4 @@
-﻿using BuddyNetworks.Roosters.ViewModels;
+﻿using BuddyNetworks.Roosters.iOS.ViewModels;
 
 namespace BuddyNetworks.Roosters.Views;
 
