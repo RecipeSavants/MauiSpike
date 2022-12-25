@@ -102,7 +102,7 @@ namespace BuddyNetworks.Roosters.iOS.ViewModels
                 _communities.Add("Leather Guys");
                 CommunityLabel1 = "Leather Guys ";
                 CommunityLabel2 = "Muscle Guys ";
-                Communities = String.Join(",", _communities);
+                Communities = String.Join(", ", _communities);
             }
             catch (Exception ex)
             {
